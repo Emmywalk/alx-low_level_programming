@@ -9,12 +9,6 @@
 
 int main(void)
 {
-	const char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	ssize_t len = sizeof(*msg);
-	ssize_t written = write(STDERR_FILENO, msg, len - 1);
-
-	if (written == -1)
-		return (0);
-
+	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
