@@ -16,21 +16,3 @@ void print_buffer(char *buffer, unsigned int size)
 
 	printf("\n");
 }
-
-int main(void)
-{
-	char buffer[16] = {0};
-
-	/* Print the buffer before memset */
-	printf("Before memset:\n");
-	print_buffer(buffer, sizeof(buffer));
-
-	/* Fill the buffer with 0xff using _memset() */
-	_memset(buffer, 0xff, sizeof(buffer));
-
-	/* Print the buffer after memset */
-	printf("After memset:\n");
-	print_buffer(buffer, sizeof(buffer));
-
-	return 0;
-}
